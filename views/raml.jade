@@ -1,0 +1,30 @@
+#%RAML 0.8
+title: UsersAPI
+version: 1.0
+baseUri: http://enord-macbook-pro.local:3000/users
+
+/addUser:
+  post:
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {"orderId": "4321"}
+/getAll:
+  get:
+    description: Gets a list of all the users
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+                  {
+                    "_id": "56e5c3c1f9ba2a0d68789fa5",
+                    "user_id": "eknord",
+                    "first_name": "Erik",
+                    "last_name": "Nord",
+                    "password": "password4",
+                    "profession": "Senior Architect",
+                    "__v": 0
+                  }
